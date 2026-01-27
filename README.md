@@ -1,2 +1,2 @@
 # tech-tailwindcss
-Storybook上でTailwind CSSについて検証する
+Storybook上で[Tailwind CSS](https://tailwindcss.com/docs/installation/using-vite)について検証する
