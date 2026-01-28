@@ -6,50 +6,83 @@ const meta = {
   title: "UI/Button",
   component: Button,
   parameters: {
-    // Optional parameter to center the component in the Canvas. More info: https://storybook.js.org/docs/configure/story-layout
+    // Canvas 上でコンポーネントを中央寄せで表示するための任意パラメータ
+    // 詳細: https://storybook.js.org/docs/configure/story-layout
     layout: "centered",
   },
-  // This component will have an automatically generated Autodocs entry: https://storybook.js.org/docs/writing-docs/autodocs
+  // このコンポーネントには自動生成された Autodocs ページが作成されます
+  // 詳細: https://storybook.js.org/docs/writing-docs/autodocs
   tags: ["autodocs"],
-  // More on argTypes: https://storybook.js.org/docs/api/argtypes
+  // argTypes の詳細設定（Storybook Controls 用）
+  // 詳細: https://storybook.js.org/docs/api/argtypes
   argTypes: {},
-  // Use `fn` to spy on the onClick arg, which will appear in the actions panel once invoked: https://storybook.js.org/docs/essentials/actions#action-args
+  // fn を使って onClick をスパイすることで、
+  // クリック時に Actions パネルへイベントが表示されるようになります
+  // 詳細: https://storybook.js.org/docs/essentials/actions#action-args
   args: { onClick: fn() },
 } satisfies Meta<typeof Button>;
 
 export default meta;
 type Story = StoryObj<typeof meta>;
 
-export const Primary: Story = {
+export const ColorPrimary: Story = {
   args: {
-    variant: "primary",
-    children: "ボタン",
+    color: "primary",
+    children: "ログイン",
   },
 };
 
-export const Secondary: Story = {
+export const ColorSecondary: Story = {
   args: {
-    variant: "secondary",
-    children: "ボタン",
+    color: "secondary",
+    children: "ログイン",
   },
 };
 
-export const Large: Story = {
+export const SizeLarge: Story = {
   args: {
     size: "large",
-    children: "ボタン",
+    children: "ログイン",
   },
 };
 
-export const Medium: Story = {
+export const SizeMedium: Story = {
   args: {
-    children: "ボタン",
+    children: "ログイン",
   },
 };
 
-export const Small: Story = {
+export const SizeSmall: Story = {
   args: {
     size: "small",
-    children: "ボタン",
+    children: "ログイン",
+  },
+};
+
+export const LoadingTrue: Story = {
+  args: {
+    children: "ログイン",
+    loading: true,
+  },
+};
+
+export const LoadingFalse: Story = {
+  args: {
+    children: "ログイン",
+    loading: false,
+  },
+};
+
+export const DisabledTrue: Story = {
+  args: {
+    children: "ログイン",
+    disabled: true,
+  },
+};
+
+export const DisabledFalse: Story = {
+  args: {
+    children: "ログイン",
+    disabled: false,
   },
 };
